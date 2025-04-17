@@ -8,10 +8,10 @@
       "confirmPassword": "123456"
     },
     {
-      "id": "322f",
+      "id": "2864",
       "email": "katya@gmail.com",
       "password": "123456",
-      "name": "Катя",
+      "name": "Катя Какатя",
       "confirmPassword": "123456"
     }
   ],
@@ -31,6 +31,14 @@
       "author": "Маша",
       "userId": "7e9b",
       "date": "2025-04-17T16:43:52.812Z"
+    },
+    {
+      "id": "3865",
+      "title": "вамя",
+      "message": "авсияв",
+      "author": "Катя Какатя",
+      "userId": "2864",
+      "date": "2025-04-17T17:05:39.434Z"
     }
   ]
 }
