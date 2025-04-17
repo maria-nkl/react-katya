@@ -304,3 +304,75 @@ body.dark {
 .logout-button:hover {
   background-color: #d32f2f;
 }
+
+.feedback-item {
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.feedback-header {
+  margin-bottom: 8px;
+}
+
+.feedback-topic {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 5px 0;
+  color: #333;
+}
+
+.feedback-meta {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 13px;
+  color: #666;
+}
+
+.feedback-author {
+  font-weight: 500;
+}
+
+.feedback-date {
+  color: #999;
+}
+
+.feedback-text {
+  font-size: 15px;
+  line-height: 1.5;
+  margin: 10px 0;
+  color: #444;
+}
+
+.feedback-divider {
+  height: 1px;
+  background: #f0f0f0;
+  margin-top: 15px;
+}
+
+.feedback-delete-btn {
+  background: none;
+  border: none;
+  color: #ff4d4f;
+  cursor: pointer;
+  font-size: 13px;
+  padding: 0;
+  margin-top: 5px;
+}
+
+.feedback-delete-btn:hover {
+  text-decoration: underline;
+}
+
+.loading {
+  color: #666;
+  text-align: center;
+  padding: 20px;
+}
+
+.error {
+  color: #ff4d4f;
+  text-align: center;
+  padding: 20px;
+}

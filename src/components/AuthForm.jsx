@@ -95,7 +95,6 @@
 
 // export default AuthForm;
 
-
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { useDispatch, useSelector } from 'react-redux';
@@ -111,31 +110,21 @@ const AuthForm = ({ isLogin, onSuccess }) => {
   } = useForm();
 
   const dispatch = useDispatch();
-  const { isLoading } = useSelector(state => state.auth);
-  const [authError, setAuthError] = useState(null);
+  const { isLoading, error } = useSelector(state => state.auth);
+  const [localError, setLocalError] = useState(null);
 
   const onSubmit = async (data) => {
-    setAuthError(null);
+    setLocalError(null);
     try {
       if (isLogin) {
-        await dispatch(loginUser(data));
+        await dispatch(loginUser(data)).unwrap();
       } else {
-        await dispatch(registerUser(data));
+        await dispatch(registerUser(data)).unwrap();
       }
-      
-      // Проверяем, прошла ли аутентификация
-      const user = JSON.parse(localStorage.getItem('currentUser'));
-      if (user) {
-        reset();
-        onSuccess();
-      } else {
-        setAuthError(isLogin 
-          ? 'Неверный email или пароль' 
-          : 'Пользователь с таким email уже существует');
-      }
+      reset();
+      onSuccess();
     } catch (error) {
-      setAuthError('Произошла ошибка при авторизации');
-      console.error('Auth error:', error);
+      setLocalError(error);
     }
   };
 
@@ -201,7 +190,9 @@ const AuthForm = ({ isLogin, onSuccess }) => {
         </div>
       )}
 
-      {authError && <div className="error-message">{authError}</div>}
+      {(error || localError) && (
+        <div className="error-message">{error || localError}</div>
+      )}
       
       <button 
         type="submit" 

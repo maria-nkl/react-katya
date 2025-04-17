@@ -1,3 +1,36 @@
 {
-    "users": []
-  }
+  "users": [
+    {
+      "id": "7e9b",
+      "email": "nik@gmail.com",
+      "password": "123456",
+      "name": "Маша",
+      "confirmPassword": "123456"
+    },
+    {
+      "id": "322f",
+      "email": "katya@gmail.com",
+      "password": "123456",
+      "name": "Катя",
+      "confirmPassword": "123456"
+    }
+  ],
+  "feedbacks": [
+    {
+      "id": "313d",
+      "title": "первый отзыв",
+      "message": "Очень очень хороший сайт!!!!!!!!!!!!!!!!!!!!!!!!!!",
+      "author": "Катя",
+      "userId": "322f",
+      "date": "2025-04-17T16:43:06.364Z"
+    },
+    {
+      "id": "3235",
+      "title": "третий отзыв",
+      "message": "ПРОСТО УЖАСНЫЙ САЙТ",
+      "author": "Маша",
+      "userId": "7e9b",
+      "date": "2025-04-17T16:43:52.812Z"
+    }
+  ]
+}
